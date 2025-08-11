@@ -1,0 +1,83 @@
+@font-face {
+    font-family: 'druk-wide-bold';
+    src: url('/src/assets/fonts/DrukWideBold.ttf');
+}
+
+@font-face {
+    font-family: 'apercu-bold';
+    src: url('/src/assets/fonts/apercu_bold_pro.otf');
+}
+
+@font-face {
+    font-family: 'apercu-medium';
+    src: url('/src/assets/fonts/apercu_medium_pro.otf');
+}
+
+@font-face {
+    font-family: 'apercu-regular';
+    src: url('/src/assets/fonts/apercu_regular_pro.otf');
+}
+
+@font-face {
+    font-family: 'rascon';
+    src: url('/src/assets/fonts/Gantians-BLL2B.otf');
+}
+
+@font-face {
+    font-family: 'vangard';
+    src: url('/src/assets/fonts/Vanguard\ Valor.otf');
+}
+
+@font-face {
+    font-family: 'magda-bold';
+    src: url('/src/assets/fonts/FF\ Magda\ Clean\ Mono\ OT\ Bold.ttf');
+}
+
+@font-face {
+    font-family: 'magda-regular';
+    src: url('/src/assets/fonts/FF\ Magda\ Clean\ Mono\ OT\ Regular.ttf');
+}
+
+:root {
+    --primary-text-color: black;
+    --primary-background-color: white;
+    --header-background: "white";
+    color-scheme: none;
+    --border-color: black;
+    --scale: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: var(--primary-text-color);
+    text-decoration: none;
+}
+
+
+html {
+    background-color: white;
+    /* transition : background-color 1s linear; */
+}
+
+html::after {
+    content: "";
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    transform: scaleY(var(--scale));
+    transform-origin: bottom center;
+    background: black;
+    z-index: -1;
+    transition: transform 0.2s;
+}
+
+p {
+    position: relative;
+    z-index: 12;
+}

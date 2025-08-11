@@ -1,0 +1,15 @@
+
+.aboutText {
+
+        font-family: "vangard";
+        font-size: 1.5vw;
+        position: relative;
+        z-index: 11;
+        width: 900px;
+        margin: auto;
+
+        text-align: center;
+
+        margin-top: 220px;
+
+}

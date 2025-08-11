@@ -1,0 +1,36 @@
+
+
+.norButton {
+
+    padding: 8px 20px;
+    border-radius: 8px;
+    position: relative;
+    border: 1px solid var(--border-color);
+    z-index: 1;
+
+}
+
+.norButton::after {
+    z-index: 0;
+    content: "";
+    border-radius: 8px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: calc(100% - 1px);
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: bottom center;
+    background: green;
+    transition: transform 0.5s;
+}
+
+.norButton:hover {
+    cursor: pointer;
+}
+
+.norButton:hover::after {
+
+    transform: scaleY(1);
+
+}
