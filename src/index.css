@@ -38,14 +38,6 @@
     src: url('/src/assets/fonts/FF\ Magda\ Clean\ Mono\ OT\ Regular.ttf');
 }
 
-:root {
-    --primary-text-color: black;
-    --primary-background-color: white;
-    --header-background: "white";
-    color-scheme: none;
-    --border-color: black;
-    --scale: 0;
-}
 
 * {
     margin: 0;

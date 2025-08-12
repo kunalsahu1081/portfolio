@@ -65,7 +65,7 @@ export const LinkedInIcon = React.memo(() => {
     return (
         <a
             target="_blank"
-            href="https://github.com/kunalsahu1081"
+            href="https://www.linkedin.com/in/kunal-sahu-2a8a49200/"
             className="linkedIcon"
         >
             <LinkedIcon />

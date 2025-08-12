@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
-import "./header.css";
+import styles from "./header.module.scss";
 import { GithubLink, LinkedInIcon } from "../header-icon-transition/headerIcon";
 
 let prevScrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -43,11 +43,10 @@ const PHeader = ({ children }: { children: React.ReactNode }) => {
         <>
             <section
                 style={{
-                    //     position: position,
                     height: position == "absolute" ? "0" : "5vw",
                 }}
                 role="banner"
-                className={"PHeader"}
+                className={styles.PHeader}
             >
                 {children}
 
@@ -63,7 +62,7 @@ const PHeader = ({ children }: { children: React.ReactNode }) => {
 PHeader.title = React.memo(({ children }: { children: React.ReactNode }) => {
     return (
         <>
-            <a href={"/"} className="HTitle">
+            <a href={"/"} className={styles.HTitle}>
                 {children}
             </a>
         </>
@@ -73,7 +72,7 @@ PHeader.title = React.memo(({ children }: { children: React.ReactNode }) => {
 PHeader.navMenu = React.memo(({ children }: { children: React.ReactNode }) => {
     return (
         <>
-            <div role="navigation" className={"PNavigation"}>
+            <div role="navigation" className={styles.PNavigation}>
                 <ul>{children}</ul>
             </div>
         </>
@@ -88,17 +87,17 @@ PHeader.navMenuItem = React.memo(
                     <NavLink
                         className={({ isActive, isPending }) =>
                             isPending
-                                ? "navItem"
+                                ? styles.navItem
                                 : isActive
-                                ? "navItem active"
-                                : "navItem"
+                                ? `${styles.navItem} ${styles.active}`
+                                : `${styles.navItem}`
                         }
                         to={to}
                     >
                         {" "}
                         {title}
                         <svg
-                            className="icon"
+                            className={styles.icon}
                             xmlns="http://www.w3.org/2000/svg"
                             fill="#000000"
                             width="12px"

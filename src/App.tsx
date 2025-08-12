@@ -1,12 +1,11 @@
-import {useState} from "react";
+import React, {useState} from "react";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import PLayout from "./components/layout/layout";
-import Resume from "./pages/resume";
-
+// import Resume from "./pages/resume";
 import "./App.css";
 import About from "./pages/about";
-import Background from "./components/background/background";
-import ExperienceScroll from "./components/projects/experience-scroll.tsx";
+import Resume from "./pages/resume.tsx";
+
 
 function App() {
     const [count, setCount] = useState(0);
@@ -19,21 +18,11 @@ function App() {
                 <Routes>
                     <Route
                         path="/resume"
-                        element={
-                            <>
-                                <Resume/>
-                            </>
-                        }
+                        element={<Resume/>}
                     ></Route>
                     <Route
                         path="/about"
-                        element={
-                            <>
-                                <About/>
-                                <ExperienceScroll />
-                                <div style={{height: '100vh'}} />
-                            </>
-                        }
+                        element={<About/>}
                     ></Route>
                 </Routes>
             </BrowserRouter>

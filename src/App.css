@@ -15,11 +15,7 @@
     __card_background_scale: 0;
     __card_border_scale: 0;
 
-
-    --border-left: -12px;
-    --border-height: 12px;
-
-
+    /* Disable color schemes taking effect from other libraries*/
     color-scheme: none;
 
 }
