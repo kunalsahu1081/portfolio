@@ -1,4 +1,5 @@
 import PHeader from "../header/header";
+import {NavMenu, NavMenuItem} from "../header/headerMenu.tsx";
 
 const PLayout = () => {
     return (
@@ -7,12 +8,12 @@ const PLayout = () => {
 
                 <PHeader.title>KUNAL SAHU</PHeader.title>
 
-                <PHeader.navMenu>
-                    <PHeader.navMenuItem title="About" to="/about" />
-                    <PHeader.navMenuItem title="Projects" to="/projects" />
-                    <PHeader.navMenuItem title="Experience" to="/experience" />
-                    <PHeader.navMenuItem title="Resume" to="/resume" />
-                </PHeader.navMenu>
+                <NavMenu>
+                    <NavMenuItem title="About" to="/about" />
+                    <NavMenuItem title="Projects" to="/projects" />
+                    <NavMenuItem title="Experience" to="/experience" />
+                    <NavMenuItem title="Resume" to="/resume" />
+                </NavMenu>
 
             </PHeader>
         </>

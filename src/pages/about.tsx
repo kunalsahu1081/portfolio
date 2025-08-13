@@ -1,7 +1,14 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "../styles/about.css";
+import {changeTheme, ThemeType} from "../utils/changeTheme.ts";
 
 const About = () => {
+
+
+    useEffect(() => {
+        changeTheme(ThemeType.light);
+    }, []);
+
     return (
         <>
             <div className="aboutText">

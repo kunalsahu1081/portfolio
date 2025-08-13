@@ -1,0 +1,45 @@
+.headerIcon {
+
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    width: 40px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    transition: width 1s;
+    overflow: hidden;
+    gap: 4px;
+    padding: 4px 8px;
+    direction: rtl;
+    max-height: 36px;
+    //height: 36px;
+
+    svg {
+        min-width: 32px;
+    }
+
+    p {
+        font-family: "vangard";
+        display: none;
+        width: 80px;
+        opacity: 0;
+        color: var(--primary-text-color);
+        transition: all 2s;
+        white-space: nowrap;
+    }
+
+}
+
+.headerIcon:hover {
+    width: 120px;
+    display: flex;
+    background: var(--inverted-background-color);
+
+    p {
+        color: var(--inverted-text-color);
+        display: block;
+        opacity: 1;
+    }
+}
+

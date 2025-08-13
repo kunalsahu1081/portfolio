@@ -8,9 +8,11 @@ const prevScrollDirection: string = "";
 let timeout: number = 0;
 
 const PHeader = ({ children }: { children: React.ReactNode }) => {
+
     const location = useLocation();
     const [position, set_position] = useState("fixed");
 
+    // scroll handler to hide header when scrolled down
     const onScroll = () => {
         if (timeout) clearTimeout(timeout);
 
@@ -21,10 +23,10 @@ const PHeader = ({ children }: { children: React.ReactNode }) => {
                 prevScrollDirection !== "down" &&
                 location.pathname?.includes("resume")
             ) {
-                // downscroll code here
+                // down scroll absolute
                 set_position("absolute");
             } else if (st < prevScrollTop && prevScrollDirection !== "up") {
-                // upscroll code
+                // up scroll fixed
                 set_position("fixed");
             }
             prevScrollTop = st <= 0 ? 0 : st; // for Mobile or negative scrolling
@@ -35,15 +37,15 @@ const PHeader = ({ children }: { children: React.ReactNode }) => {
         document.addEventListener("scroll", onScroll);
 
         return () => {
-            document.addEventListener("scroll", onScroll);
+            document.removeEventListener("scroll", onScroll);
         };
-    });
+    }, []);
 
     return (
         <>
             <section
                 style={{
-                    height: position == "absolute" ? "0" : "5vw",
+                    height: position == "absolute" ? "0" : undefined,
                 }}
                 role="banner"
                 className={styles.PHeader}
@@ -69,65 +71,5 @@ PHeader.title = React.memo(({ children }: { children: React.ReactNode }) => {
     );
 });
 
-PHeader.navMenu = React.memo(({ children }: { children: React.ReactNode }) => {
-    return (
-        <>
-            <div role="navigation" className={styles.PNavigation}>
-                <ul>{children}</ul>
-            </div>
-        </>
-    );
-});
-
-PHeader.navMenuItem = React.memo(
-    ({ title, to }: { title: string; to: string }) => {
-        return (
-            <>
-                <li>
-                    <NavLink
-                        className={({ isActive, isPending }) =>
-                            isPending
-                                ? styles.navItem
-                                : isActive
-                                ? `${styles.navItem} ${styles.active}`
-                                : `${styles.navItem}`
-                        }
-                        to={to}
-                    >
-                        {" "}
-                        {title}
-                        <svg
-                            className={styles.icon}
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="#000000"
-                            width="12px"
-                            height="12px"
-                            viewBox="0 0 24.00 24.00"
-                            stroke="#000000"
-                            stroke-width="2.4"
-                        >
-                            <g id="SVGRepo_bgCarrier" stroke-width="0" />
-
-                            <g
-                                id="SVGRepo_tracerCarrier"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke="#CCCCCC"
-                                stroke-width="0.576"
-                            />
-
-                            <g id="SVGRepo_iconCarrier">
-                                <path
-                                    fill="black"
-                                    d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"
-                                />
-                            </g>
-                        </svg>
-                    </NavLink>
-                </li>
-            </>
-        );
-    }
-);
 
 export default PHeader;

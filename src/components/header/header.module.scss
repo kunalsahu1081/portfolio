@@ -1,149 +1,138 @@
 .PHeader {
-
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding-left: 32px;
-        position: fixed;
-        top: 0;
-        width: calc(100vw - 32px);
-        z-index: 121;
-        background: var(--header-background);
-
-        border-bottom: 1px solid var(--border-color);;
-
-        transition: height 0.5s;
-        overflow: hidden;
-        transition: background-color 1s;
-
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 32px;
+    padding-right: 32px;
+    position: fixed;
+    top: 0;
+    width: calc(100vw - 64px);
+    z-index: 121;
+    border-bottom: 1px solid var(--border-color);;
+    transition: height 0.5s;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    height: 5vw;
 }
 
 .HTitle {
-        font-family: "druk-wide-bold";
-        font-size: 2vw;
+    font-family: "druk-wide-bold", serif;
+    font-size: 2vw;
 }
 
 .PNavigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.7vw;
+    flex: 1;
 
+    ul {
         display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 1.7vw;
-        flex: 1;
-
-        ul {
-                display: flex;
-                gap: 3vw;
-        }
-
+        gap: 3vw;
+        list-style-type: none;
+    }
 }
 
 .navItem {
-        position: relative;
-        font-family: "rascon";
-        font-size: 1.1vw;
+    position: relative;
+    font-family: "rascon", serif;
+    font-size: 1.1vw;
 
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
 
-        width: 60px;
+    width: 60px;
 
-        transition: width 0.6s;
+    transition: width 0.6s;
 
-        .icon {
-                opacity: 0;
-                transition: width 0.2s;
+    .icon {
+        opacity: 0;
+        transition: width 0.2s;
 
-                path {
-                        fill: var(--border-color) !important;
-                        stroke: var(--border-color) !important;
-                }
+        path {
+            fill: var(--border-color) !important;
+            stroke: var(--border-color) !important;
         }
+    }
 }
 
 .navItem:after {
-  content: "";
-  background: var(--border-color);
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0px;
-  transition: width 1s;
+    content: "";
+    background: var(--border-color);
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    transition: width 1s;
 
-  margin-top: 2px;
+    margin-top: 2px;
 }
 
 .navItem:hover:after {
-  content: "";
-  background: var(--border-color);
-  height: 2px;
-  width: 80px;
+    content: "";
+    background: var(--border-color);
+    height: 2px;
+    width: 80px;
 }
 
 .active:after {
-  content: "";
-  background: var(--border-color);
-  height: 2px;
-  width: 100px;
+    content: "";
+    background: var(--border-color);
+    height: 2px;
+    width: 100px;
 }
 
 .active {
 
-        width: 100px;
+    width: 100px;
 
-        .icon {
-                opacity: 1 !important;
-        }
+    .icon {
+        opacity: 1 !important;
+    }
 }
 
 .navItem:hover {
 
-        width: 100px;
+    width: 100px;
 
-        .icon {
-                opacity: 1;
-        }
+    .icon {
+        opacity: 1;
+    }
 }
 
 @media only screen and (max-width: 1200px) {
 
-        .HTitle {
-              font-size: 1.5vw;  
-        }
+    .HTitle {
+        font-size: 1.5vw;
+    }
 
-        .PHeader {
-                height: 8vw;
-        }
+    .PHeader {
+        height: 8vw;
+    }
 
 }
 
 @media only screen and (max-width: 600px) {
 
-        .HTitle {
-              font-size: 2vw;  
-        }
+    .PHeader {
+        padding-left: 24px !important;
+    }
 
-        .PHeader {
-                height: 10vw;
-        }
+    .PNavigation {
+        display: none;
+    }
 
-}
+    .HTitle {
+        font-size: 13px;
+    }
 
-@media only screen and (max-width: 500px) {
-
-        .HTitle {
-              font-size: 2.5vw;  
-        }
-
-        .PHeader {
-                height: 12vw;
-        }
+    .PHeader {
+        height: 48px;
+    }
 
 }
 
-ul {
-    list-style-type: none;
-}
 

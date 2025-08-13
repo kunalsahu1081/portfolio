@@ -1,8 +1,9 @@
-import React, { useEffect, useRef } from "react";
+import React, {useEffect, useRef} from "react";
 import * as pdfjsLib from "pdfjs-dist";
 import pdfWorker from "pdfjs-dist/build/pdf.worker?worker";
 import "pdfjs-dist/web/pdf_viewer.css";
 import ButtonCard from "../components/global/button-card.tsx";
+import {changeTheme, ThemeType} from "../utils/changeTheme.ts";
 
 // Set worker
 pdfjsLib.GlobalWorkerOptions.workerPort = new pdfWorker();
@@ -11,17 +12,8 @@ const Resume = () => {
     const containerRef = useRef<any>(null);
 
     useEffect(() => {
-        const root = document.documentElement;
-        setTimeout(() => {
-            root.style.setProperty("--border-color", "white");
-        }, 200);
 
-        setTimeout(() => {
-            root.style.setProperty("--header-background", "black");
-             root.style.setProperty("--primary-text-color", "white");
-        }, 200);
-
-        root.style.setProperty("--scale", "1");
+        changeTheme(ThemeType.dark);
 
         const renderPDF = async () => {
             const loadingTask = pdfjsLib.getDocument("/kunal_sahu_resume.pdf"); // Must be in /public
@@ -80,15 +72,6 @@ const Resume = () => {
         };
 
         renderPDF();
-
-        return () => {
-            const root = document.documentElement;
-            root.style.setProperty("color-scheme", "none");
-            root.style.setProperty("--border-color", "black");
-            root.style.setProperty("--header-background", "white");
-            root.style.setProperty("--primary-text-color", "black");
-            root.style.setProperty("--scale", "0");
-        };
     }, []);
 
     return (

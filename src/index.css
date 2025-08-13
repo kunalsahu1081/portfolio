@@ -62,7 +62,7 @@ html::after {
     left: 0;
     width: 100vw;
     height: 100vh;
-    transform: scaleY(var(--scale));
+    transform: scaleY(var(--background-scale));
     transform-origin: bottom center;
     background: black;
     z-index: -1;
