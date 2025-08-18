@@ -69,13 +69,6 @@ const ExperienceScroll = () => {
             80 - 25
         );
 
-        console.log(
-            total_width_increase,
-            scroll_diff,
-            window.scrollY,
-            window.innerHeight
-        );
-
         const width = 25 + total_width_increase;
 
         const height = 15 + (total_width_increase * 15) / 25;

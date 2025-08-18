@@ -2,14 +2,16 @@ import React from "react";
 import ButtonCard from "../global/button-card.tsx";
 
 
-
 const ExperienceCards = React.memo(({children, id}) => {
 
     return <div style={{width: '25vw'}}>
 
-            <div id={id} className={'expCard'}>
-                {children}
-            </div>
+        <div id={id} className={'expCard'}>
+            {children}
+
+            <div className={'expOverLay'}/>
+
+        </div>
 
     </div>
 
@@ -25,11 +27,11 @@ export const ECardsTitle = React.memo(({children}) => {
 
 })
 
-export const ECardBg = React.memo(({children}) => {
+export const ECardBg = React.memo(({url}) => {
 
     return <>
 
-        <img src={children} className={"EBackground"}/>
+        <img src={url} className={"EBackground"}/>
 
     </>
 
@@ -54,7 +56,7 @@ export const ECardSections = React.memo(({children}) => {
 
 })
 
-export const ECardSections = React.memo(({children}) => {
+export const ECardTitle = React.memo(({children}) => {
 
     return <>
 
@@ -66,7 +68,7 @@ export const ECardSections = React.memo(({children}) => {
 
 })
 
-ExperienceCards.sTitle = React.memo(({children}) => {
+export const ECardSTitle = React.memo(({children}) => {
 
     return <>
 
@@ -78,7 +80,7 @@ ExperienceCards.sTitle = React.memo(({children}) => {
 
 })
 
-ExperienceCards.leftWindow = React.memo(({children}) => {
+export const LeftWindow = React.memo(({children}) => {
 
     return <>
 
@@ -90,7 +92,7 @@ ExperienceCards.leftWindow = React.memo(({children}) => {
 
 })
 
-ExperienceCards.rightWindow = React.memo(({children}) => {
+export const RightWindow = React.memo(({children}) => {
 
     return <>
 

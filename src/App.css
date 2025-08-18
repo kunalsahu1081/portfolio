@@ -26,3 +26,21 @@
     color-scheme: none;
 
 }
+
+/*#nativeCard::after {*/
+/*    left: var(--border-left);*/
+/*    right: 0;*/
+/*    bottom: var(--border-left);*/
+/*    height: var(--border-height);*/
+/*}*/
+
+/*!* Left shadow *!*/
+/*#nativeCard::before {*/
+/*    content: "";*/
+/*    position: absolute;*/
+/*    background: black;*/
+/*    top: 12px;*/
+/*    bottom: -12px;*/
+/*    left: -12px;*/
+/*    width: 12px;*/
+/*}*/

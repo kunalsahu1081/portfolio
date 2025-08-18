@@ -19,6 +19,8 @@ const About = () => {
             </div>
 
             <ExperienceScroll />
+
+            <div style={{height: '100vh'}}></div>
         </>
     );
 };

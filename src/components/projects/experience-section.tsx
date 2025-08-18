@@ -1,30 +1,30 @@
-import ExperienceCards from "./experience-cards.tsx";
+import ExperienceCards, {ECardBg, ECardTitle, LeftWindow, RightWindow} from "./experience-cards.tsx";
 
 
 const ExperienceSection = () => {
 
     return <>
 
-        <ExperienceCards.newCard>
+        <ExperienceCards>
 
-            <ExperienceCards.leftWindow>asdf</ExperienceCards.leftWindow>
-            <ExperienceCards.rightWindow>asdf</ExperienceCards.rightWindow>
+            <ECardBg url={"/project-images/portfolio.png"} />
+            <ECardTitle>Portfolio</ECardTitle>
 
-        </ExperienceCards.newCard>
+        </ExperienceCards>
 
-        <ExperienceCards.newCard>
+        <ExperienceCards>
 
-            <ExperienceCards.leftWindow>asdf</ExperienceCards.leftWindow>
-            <ExperienceCards.rightWindow>asdf</ExperienceCards.rightWindow>
+            <ECardBg url={"/project-images/portfolio.png"} />
+            <ECardTitle>Portfolio</ECardTitle>
 
-        </ExperienceCards.newCard>
+        </ExperienceCards>
 
-        <ExperienceCards.newCard id={'nativeCard'}>
+        <ExperienceCards id={'nativeCard'}>
 
-            <ExperienceCards.leftWindow>asdf</ExperienceCards.leftWindow>
-            <ExperienceCards.rightWindow>asdf</ExperienceCards.rightWindow>
+            <ECardBg url={"/project-images/portfolio.png"} />
+            <ECardTitle>Portfolio</ECardTitle>
 
-        </ExperienceCards.newCard>
+        </ExperienceCards>
 
     </>
 
