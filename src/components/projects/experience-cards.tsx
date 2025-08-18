@@ -2,25 +2,20 @@ import React from "react";
 import ButtonCard from "../global/button-card.tsx";
 
 
-const ExperienceCards: unknown = {};
 
-ExperienceCards.newCard = React.memo(({children, id}) => {
+const ExperienceCards = React.memo(({children, id}) => {
 
     return <div style={{width: '25vw'}}>
-
-        {/*<ButtonCard>*/}
 
             <div id={id} className={'expCard'}>
                 {children}
             </div>
 
-        {/*</ButtonCard>*/}
-
     </div>
 
 })
 
-ExperienceCards.title = React.memo(({children}) => {
+export const ECardsTitle = React.memo(({children}) => {
 
     return <p className={"ETitle"}>
 
@@ -30,7 +25,7 @@ ExperienceCards.title = React.memo(({children}) => {
 
 })
 
-ExperienceCards.background = React.memo(({children}) => {
+export const ECardBg = React.memo(({children}) => {
 
     return <>
 
@@ -40,7 +35,7 @@ ExperienceCards.background = React.memo(({children}) => {
 
 })
 
-ExperienceCards.sections = React.memo(({children}) => {
+export const ECardSections = React.memo(({children}) => {
 
     return <>
 
@@ -59,7 +54,7 @@ ExperienceCards.sections = React.memo(({children}) => {
 
 })
 
-ExperienceCards.title = React.memo(({children}) => {
+export const ECardSections = React.memo(({children}) => {
 
     return <>
 

@@ -62,11 +62,24 @@ html::after {
     left: 0;
     width: 100vw;
     height: 100vh;
-    transform: scaleY(var(--background-scale));
+    transform: scaleY(var(--upcoming-background-scale));
     transform-origin: bottom center;
-    background: black;
+    background: var(--upcoming-background-color);
     z-index: -1;
     transition: transform 0.2s;
+}
+
+html::before {
+    content: "";
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    transform: scaleY(var(--background-scale));
+    transform-origin: bottom center;
+    background: var(--scaling-background-color);
+    z-index: -1;
 }
 
 p {

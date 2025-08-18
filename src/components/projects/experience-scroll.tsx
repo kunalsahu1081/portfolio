@@ -141,8 +141,8 @@ const ExperienceScroll = () => {
                     className={"scrollWrap"}
                 >
                     <ExperienceSection/>
-
                     <ExperienceSection/>
+
                 </div>
             </section>
         </>

@@ -15,9 +15,10 @@ const themeVariations: object = {
         "--inverted-background-color": "black",
         "--btn-hovered-background-color": "green",
         "--header-background": "white",
+        "--upcoming-background-color": "white",
 
         /* initial scales */
-        "--background-scale": 0,
+        "--upcoming-background-scale": 1,
         "--card_background_scale": 0,
         "__card_border_scale": 0,
 
@@ -36,9 +37,10 @@ const themeVariations: object = {
         "--inverted-background-color": "white",
         "--btn-hovered-background-color": "green",
         "--header-background": "black",
+        "--upcoming-background-color": "black",
 
         /* initial scales */
-        "--background-scale": 1,
+        "--upcoming-background-scale": 1,
         "--card_background_scale": 0,
         "__card_border_scale": 0,
 
@@ -64,18 +66,13 @@ export const changeTheme = (theme: ThemeType) => {
         }
     }, 200)
 
+    setTimeout(() => {
+        root.style.setProperty("--background-scale", properties["--upcoming-background-scale"]);
+        root.style.setProperty("--scaling-background-color", properties["--upcoming-background-color"]);
+        root.style.setProperty("--upcoming-background-scale", "0");
+    }, 300)
 
-    root.style.setProperty("--background-scale", "1");
 
-}
-
-export const removeTheme = () => {
-
-    const root = document.documentElement;
-    root.style.setProperty("color-scheme", "none");
-    root.style.setProperty("--border-color", "black");
-    root.style.setProperty("--header-background", "white");
-    root.style.setProperty("--primary-text-color", "black");
-    root.style.setProperty("--scale", "0");
-
+    root.style.setProperty("--upcoming-background-scale", properties["--upcoming-background-scale"]);
+    root.style.setProperty("--upcoming-background-color", properties["--upcoming-background-color"]);
 }

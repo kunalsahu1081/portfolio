@@ -1,6 +1,7 @@
 import React, {useEffect} from "react";
 import "../styles/about.css";
 import {changeTheme, ThemeType} from "../utils/changeTheme.ts";
+import ExperienceScroll from "../components/projects/experience-scroll.tsx";
 
 const About = () => {
 
@@ -16,6 +17,8 @@ const About = () => {
                 scalable web and mobile applications. Proficient in React, React
                 Native, Node.js, Express, and PostgreSQL.
             </div>
+
+            <ExperienceScroll />
         </>
     );
 };

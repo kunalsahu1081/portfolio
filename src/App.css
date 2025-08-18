@@ -8,10 +8,13 @@
     --primary-background-color: white;
     --inverted-background-color: black;
     --btn-hovered-background-color: green;
+    --scaling-background-color: white;
+    --upcoming-background-color: white;
     --header-background: white;
 
     /* initial scales */
     --background-scale: 1;
+    --upcoming-background-scale: 0;
     __card_background_scale: 0;
     __card_border_scale: 0;
 
@@ -22,12 +25,4 @@
     /* Disable color schemes taking effect from other libraries*/
     color-scheme: none;
 
-
-}
-
-
-#nativeCard {
-    /* background: white; */
-    border-radius: 0 !important;
-    position: relative;
 }

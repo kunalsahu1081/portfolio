@@ -20,8 +20,7 @@ const PHeader = ({ children }: { children: React.ReactNode }) => {
             const st = window.pageYOffset || document.documentElement.scrollTop;
             if (
                 st > prevScrollTop &&
-                prevScrollDirection !== "down" &&
-                location.pathname?.includes("resume")
+                prevScrollDirection !== "down"
             ) {
                 // down scroll absolute
                 set_position("absolute");
