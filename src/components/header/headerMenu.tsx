@@ -32,7 +32,7 @@ export const NavMenuItem = React.memo(
                     >
                         {title}
 
-                        <BiSolidDownArrow size={16} color={document.documentElement.style.getPropertyValue('--icon-color')} className={styles.icon} />
+                        {/*<BiSolidDownArrow size={16} color={document.documentElement.style.getPropertyValue('--icon-color')} className={styles.icon} />*/}
                     </NavLink>
                 </li>
             </>

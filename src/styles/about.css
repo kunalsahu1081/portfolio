@@ -1,15 +1,30 @@
 
 .aboutText {
 
-        font-family: "vangard";
-        font-size: 1.5vw;
-        position: relative;
-        z-index: 11;
-        width: 900px;
-        margin: auto;
+    font-family: "vangard";
+    font-size: 1.1vw;
+    position: relative;
+    z-index: 11;
+    width: 900px;
+    margin: 28vh auto 0 auto;
 
-        text-align: center;
+    color: #64ffda;
+}
 
-        margin-top: 220px;
+.aboutName {
+
+    margin-top: 18px;
+    font-size: 62px;
+    color: var(--primary-text-color);
+}
+
+.aboutDesctiption {
+    font-family: 'Calibre','Inter','San Francisco','SF Pro Text',-apple-system,system-ui,sans-serif;
+    font-weight: 400;
+    margin-top: 18px;
+    font-size: 16px;
+    line-height: 28px;
+    color: rgba(199, 198, 198, 0.78);
+
 
 }

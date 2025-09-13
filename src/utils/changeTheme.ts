@@ -7,15 +7,15 @@ const themeVariations: object = {
 
     [ThemeType.light]: {
         /* Text Colors */
-        "--primary-text-color": "black",
-        "--inverted-text-color": "white",
+        "--primary-text-color": "#color: #64ffda;",
+        "--inverted-text-color": "black",
 
         /*  background colors */
-        "--primary-background-color": "white",
-        "--inverted-background-color": "black",
+        "--primary-background-color": "#0a192f",
+        "--inverted-background-color": "white",
         "--btn-hovered-background-color": "green",
         "--header-background": "white",
-        "--upcoming-background-color": "white",
+        "--upcoming-background-color": "#0a192f",
 
         /* initial scales */
         "--upcoming-background-scale": 1,
@@ -23,8 +23,8 @@ const themeVariations: object = {
         "__card_border_scale": 0,
 
         /* borders */
-        "--border-color": "black",
-        "--icon-color": "black",
+        "--border-color": "#0a192f",
+        "--icon-color": "white",
 
         /* Disable color schemes taking effect from other libraries*/
         "color-scheme": "none",

@@ -18,6 +18,7 @@
 .HTitle {
     font-family: "druk-wide-bold", serif;
     font-size: 2vw;
+    color: #64ffda;
 }
 
 .PNavigation {
@@ -36,15 +37,14 @@
 
 .navItem {
     position: relative;
-    font-family: "rascon", serif;
+    font-family: "magda-regular", serif;
     font-size: 1.1vw;
-
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
+    padding-bottom: 8px;
 
-    width: 60px;
 
     transition: width 0.6s;
 
@@ -53,15 +53,15 @@
         transition: width 0.2s;
 
         path {
-            fill: var(--border-color) !important;
-            stroke: var(--border-color) !important;
+            fill: var(--icon-color) !important;
+            stroke: var(--icon-color) !important;
         }
     }
 }
 
 .navItem:after {
     content: "";
-    background: var(--border-color);
+    background: var(--icon-color);
     position: absolute;
     bottom: -4px;
     left: 0;
@@ -73,14 +73,14 @@
 
 .navItem:hover:after {
     content: "";
-    background: var(--border-color);
+    background: var(--icon-color);
     height: 2px;
     width: 80px;
 }
 
 .active:after {
     content: "";
-    background: var(--border-color);
+    background: var(--icon-color);
     height: 2px;
     width: 100px;
 }

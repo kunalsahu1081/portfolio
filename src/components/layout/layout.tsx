@@ -6,13 +6,15 @@ const PLayout = () => {
         <>
             <PHeader>
 
-                <PHeader.title>KUNAL SAHU</PHeader.title>
+                <PHeader.title>K</PHeader.title>
 
                 <NavMenu>
+
+                    <NavMenuItem title="About" to="/about" />
                     <NavMenuItem title="Projects" to="/projects" />
                     <NavMenuItem title="Experience" to="/experience" />
                     <NavMenuItem title="Resume" to="/resume" />
-                    <NavMenuItem title="About" to="/about" />
+
                 </NavMenu>
 
             </PHeader>

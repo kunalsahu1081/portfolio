@@ -10,7 +10,7 @@ export const GithubLink = React.memo(() => {
 
 
     useEffect(() => {
-        setColor(document.documentElement.style.getPropertyValue('--icon-color') == 'black' ? 'white' : 'black')
+        setColor(document.documentElement.style.getPropertyValue('--icon-color') )
 
     }, [location.pathname]);
 
@@ -35,7 +35,12 @@ export const LinkedInIcon = React.memo(() => {
     const [color, setColor] = useState('black');
 
     useEffect(() => {
-        setColor(document.documentElement.style.getPropertyValue('--icon-color') == 'black' ? 'white' : 'black')
+
+
+        setTimeout(() => {
+            setColor(document.documentElement.style.getPropertyValue('--icon-color'))
+        }, )
+
     }, [location.pathname]);
 
     return (
