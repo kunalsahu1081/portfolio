@@ -1,5 +1,6 @@
 import styles from './index.module.scss'
 import {useEffect} from "react";
+import StackButton, {LinkButton} from "../tech-stack/stackButton.tsx";
 
 const Experience = () => {
 
@@ -33,10 +34,7 @@ const Experience = () => {
 
             <div className={styles.experienceCard}>
 
-                <img src={'/project-images/exp1.png'} className={styles.bannerSection}>
-
-
-                </img>
+                <img src={'/project-images/exp1.png'} className={styles.bannerSection}/>
 
                 <div className={styles.descriptionSection}>
 
@@ -77,6 +75,20 @@ const Experience = () => {
                         </li>
 
                     </ul>
+
+
+                    <div style={{display: 'flex', justifyContent: 'end', gap: '20px', marginTop: '20px', marginRight: '20px'}}>
+                        <LinkButton to={'https://partners.localwell.in'}>
+                            Website
+                        </LinkButton>
+
+                        <LinkButton to={'https://play.google.com/store/apps/details?id=com.localwell&hl=en_IN&pli=1'}>
+                            App
+                        </LinkButton>
+
+                    </div>
+
+
                 </div>
 
 

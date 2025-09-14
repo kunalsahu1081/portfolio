@@ -3,6 +3,7 @@ import "../styles/about.css";
 import {changeTheme, ThemeType} from "../utils/changeTheme.ts";
 import TechStack from "../components/tech-stack";
 import Experience from "../components/Experience";
+import Projects from "../components/projects";
 
 const About = () => {
 
@@ -31,6 +32,8 @@ const About = () => {
             <TechStack />
 
             <Experience />
+
+            <Projects />
 
             <div style={{height: '100vh'}}></div>
         </>

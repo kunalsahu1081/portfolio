@@ -52,8 +52,13 @@
     background: white;
     height: 100%;
     object-fit: cover;
+    filter: blur(3px);
+    transition: filter 300ms ease;
 
+}
 
+.bannerSection:hover {
+    filter: blur(0);
 }
 
 .descriptionSection {
