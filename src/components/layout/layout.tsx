@@ -10,9 +10,10 @@ const PLayout = () => {
 
                 <NavMenu>
 
-                    <NavMenuItem title="About" to="/about" />
-                    <NavMenuItem title="Projects" to="/projects" />
-                    <NavMenuItem title="Experience" to="/experience" />
+                    <NavMenuItem title="About" to="about" />
+                    <NavMenuItem title="Experience" to="experience" />
+                    <NavMenuItem title="Projects" to="projects" />
+                    <NavMenuItem title="Contact" to="contact" />
                     <NavMenuItem title="Resume" to="/resume" />
 
                 </NavMenu>

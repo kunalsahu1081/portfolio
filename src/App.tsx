@@ -21,7 +21,7 @@ function App() {
                         element={<Resume/>}
                     ></Route>
                     <Route
-                        path="/about"
+                        path="/"
                         element={<About/>}
                     ></Route>
                 </Routes>

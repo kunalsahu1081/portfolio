@@ -19,7 +19,7 @@ const StackButton = ({children}) => {
 
 }
 
-export const LinkButton = ({children, to}) => {
+export const LinkButton = ({children, to, style={}}) => {
 
 
     return <>
@@ -28,7 +28,7 @@ export const LinkButton = ({children, to}) => {
             href={to}
             target={"_blank"}
             className={styles.stackButton}
-            style={{display: 'flex'}}
+            style={{display: 'flex', ...style}}
             rel="noopener noreferrer"
         >
             <p style={{fontFamily: 'vangard', flexShrink: 0, display: 'flex'}}> {children} </p>

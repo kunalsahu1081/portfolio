@@ -17,7 +17,7 @@ const ProjectLeft = () => {
                     Text Editor
                 </div>
 
-                <div className={styles.projectDescription} >
+                <div style={{left: '-40px'}} className={styles.projectDescription} >
                     A minimal Text Editor Build on Lexical, with rich text Editing Features like Lists, Checkbox and more Keyboard Control, Available on npm
                 </div>
 
@@ -31,6 +31,10 @@ const ProjectLeft = () => {
                 </div>
 
                 <div className={styles.projectLinks} >
+
+                    <LinkButton to={'https://lexical-text-editor-2.netlify.app/'} >
+                        Netlify
+                    </LinkButton>
 
                     <LinkButton to={'https://github.com/kunalsahu1081/wysiwyg-editor'}>
                         Github

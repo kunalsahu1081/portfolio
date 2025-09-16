@@ -4,6 +4,8 @@ import {changeTheme, ThemeType} from "../utils/changeTheme.ts";
 import TechStack from "../components/tech-stack";
 import Experience from "../components/Experience";
 import Projects from "../components/projects";
+import OtherProjects from "../components/projects/otherProjects.tsx";
+import Contact from "../components/Contact";
 
 const About = () => {
 
@@ -14,7 +16,7 @@ const About = () => {
 
     return (
         <>
-            <div className="aboutText">
+            <div id={'about'} className="aboutText">
                 Hi, my name is,
 
                 <div className="aboutName">
@@ -35,7 +37,11 @@ const About = () => {
 
             <Projects />
 
-            <div style={{height: '100vh'}}></div>
+            <OtherProjects />
+
+            <Contact />
+
+            <div style={{height: '300px'}}></div>
         </>
     );
 };
