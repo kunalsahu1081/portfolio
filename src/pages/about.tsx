@@ -2,7 +2,7 @@ import React, {useEffect} from "react";
 import "../styles/about.css";
 import {changeTheme, ThemeType} from "../utils/changeTheme.ts";
 import TechStack from "../components/tech-stack";
-import Experience from "../components/Experience";
+import Experience from "../components/experience";
 import Projects from "../components/projects";
 import OtherProjects from "../components/projects/otherProjects.tsx";
 import Contact from "../components/Contact";

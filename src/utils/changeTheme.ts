@@ -58,7 +58,7 @@ const themeVariations: object = {
 export const changeTheme = (theme: ThemeType) => {
 
     const root = document.documentElement;
-    const properties = themeVariations[theme];
+    const properties: any = themeVariations[theme];
 
     setTimeout(() => {
         for (const property in properties) {

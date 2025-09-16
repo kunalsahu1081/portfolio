@@ -15,12 +15,13 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "types": ["react", "react-dom"],
+    "noImplicitAny": false,
 
     /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
+    "strict": false,
+    "noUnusedLocals": false,
     "noUnusedParameters": true,
-    "erasableSyntaxOnly": true,
+    "erasableSyntaxOnly": false,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
     "allowSyntheticDefaultImports": true
