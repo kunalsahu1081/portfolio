@@ -7,7 +7,6 @@
     z-index: 11;
     width: 900px;
     margin: 28vh auto 0 auto;
-
     color: #64ffda;
 }
 
@@ -25,6 +24,14 @@
     font-size: 16px;
     line-height: 28px;
     color: rgba(199, 198, 198, 0.78);
+}
 
+@media screen and (max-width: 900px) {
+
+    .aboutText {
+        font-size: 11px;
+        padding: 20px;
+        width: auto;
+    }
 
 }

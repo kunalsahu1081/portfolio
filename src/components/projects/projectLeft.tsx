@@ -5,6 +5,12 @@ import React, {useEffect} from "react";
 
 const ProjectLeft = () => {
 
+    const [width, setWidth] = React.useState(null);
+
+    useEffect(() => {
+        setWidth(window.innerWidth);
+    }, []);
+
     return <>
 
         <div className={styles.projectCard}>
@@ -17,24 +23,24 @@ const ProjectLeft = () => {
                     Text Editor
                 </div>
 
-                <div style={{left: '-40px'}} className={styles.projectDescription} >
+                <div style={{left:(width > 900 ? '-40px' : null)}} className={styles.projectDescription} >
                     A minimal Text Editor Build on Lexical, with rich text Editing Features like Lists, Checkbox and more Keyboard Control, Available on npm
                 </div>
 
-                <div className={styles.projectStack}>
+                {/*<div className={styles.projectStack}>*/}
 
-                    <div className={styles.stackValue}>React</div>
-                    <div className={styles.stackValue}>Lexical</div>
-                    <div className={styles.stackValue}>Vite</div>
-                    <div className={styles.stackValue}>Typescript</div>
+                {/*    <div className={styles.stackValue}>React</div>*/}
+                {/*    <div className={styles.stackValue}>Lexical</div>*/}
+                {/*    <div className={styles.stackValue}>Vite</div>*/}
+                {/*    <div className={styles.stackValue}>Typescript</div>*/}
 
-                </div>
+                {/*</div>*/}
 
                 <div className={styles.projectLinks} >
 
-                    <LinkButton to={'https://lexical-text-editor-2.netlify.app/'} >
+                    {width > 900 ? <LinkButton to={'https://lexical-text-editor-2.netlify.app/'} >
                         Netlify
-                    </LinkButton>
+                    </LinkButton> : null}
 
                     <LinkButton to={'https://github.com/kunalsahu1081/wysiwyg-editor'}>
                         Github

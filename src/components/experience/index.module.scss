@@ -105,3 +105,29 @@
     height: 100%;
 
 }
+
+
+@media screen and (max-width: 900px) {
+
+    .experienceSection {
+        width: auto;
+        padding: 20px;
+    }
+
+    .experienceTitle {
+        height: auto;
+    }
+
+    .bannerSection {
+        display: none;
+    }
+
+    .descriptionSection {
+      width: 100%;
+    }
+
+  .overLay {
+      display: none;
+  }
+
+}

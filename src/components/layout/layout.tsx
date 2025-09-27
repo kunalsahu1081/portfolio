@@ -14,7 +14,7 @@ const PLayout = () => {
                     <NavMenuItem title="Experience" to="experience" />
                     <NavMenuItem title="Projects" to="projects" />
                     <NavMenuItem title="Contact" to="contact" />
-                    <NavMenuItem title="Resume" to="/resume" />
+                    <NavMenuItem title="Resume" to="/kunal_sahu_resume.pdf" />
 
                 </NavMenu>
 

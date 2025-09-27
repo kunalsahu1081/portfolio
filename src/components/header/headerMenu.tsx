@@ -21,6 +21,7 @@ export const NavMenuItem = React.memo(
             <>
                 <li>
                     <a
+                        target={'_blank'}
                         className={`${styles.navItem}`}
                         href={to}
                         onClick={(e) => {
@@ -35,8 +36,6 @@ export const NavMenuItem = React.memo(
                         }}
                     >
                         {title}
-
-                        {/*<BiSolidDownArrow size={16} color={document.documentElement.style.getPropertyValue('--icon-color')} className={styles.icon} />*/}
                     </a>
                 </li>
             </>

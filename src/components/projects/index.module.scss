@@ -110,8 +110,6 @@
             height: 230px;
             width: 100%;
             object-fit: cover;
-
-
         }
 
         .ODescription {
@@ -133,6 +131,52 @@
             }
         }
     }
+}
+
+@media screen and (max-width: 900px) {
+
+    .PSection {
+        width: 100% !important;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .projectCard {
+        flex-direction: column;
+
+        .projectImage {
+            width: 100%;
+        }
+
+        .descriptionSection {
+            margin-left: 0;
+
+            .projectDescription {
+                width: 100%;
+                padding: 12px 0;
+                text-align: end;
+            }
+        }
+
+    }
+
+    .OProjectContainer {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+
+        .OCard {
+            width: auto;
+            border-radius: 12px;
+
+            .OCardImage {
+                height: 230px;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
 }
 
 

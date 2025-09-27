@@ -63,4 +63,13 @@
     transform: scaleY(1);
 }
 
+@media screen and (max-width: 900px) {
+    .stackContainer {
+        width: auto;
+    }
+
+    .experienceRow {
+        flex-wrap: wrap;
+    }
+}
 

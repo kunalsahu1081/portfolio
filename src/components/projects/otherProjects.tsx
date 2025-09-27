@@ -1,5 +1,5 @@
 import styles from "./index.module.scss";
-import {useEffect} from "react";
+import React, {useEffect} from "react";
 import {LinkButton} from "../tech-stack/stackButton.tsx";
 
 
@@ -48,6 +48,11 @@ const OtherProjects = () => {
 
 const OtherProjectCard = ({url, netlify, github, title }) => {
 
+    const [width, setWidth] = React.useState(null);
+
+    useEffect(() => {
+        setWidth(window.innerWidth);
+    }, []);
 
     return <>
 
@@ -63,7 +68,7 @@ const OtherProjectCard = ({url, netlify, github, title }) => {
 
                 <div className={styles.Obuttons} >
 
-                    {netlify ? <LinkButton style={{padding: '4px 16px'}} to={netlify}>
+                    {netlify && width > 900 ? <LinkButton style={{padding: '4px 16px'}} to={netlify}>
                         Netlify
                     </LinkButton> : null}
 
